@@ -1,1 +1,27 @@
-# -anoonymouss.github.io
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset ="UTF-8">
+    <meta http-equiv="X-Ua-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Video Player </title>
+<body>
+    <h1> Youtube Video Player </h1>
+    
+    <iframe width="640px" height="390px" src="https://www.youtube.com/embed/g3-TbsMEVPw"></iframe>
+
+    <div id="video"></div>
+
+
+<script>
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var control = document.getElementsByTagName('script')[0];
+control.parentNode.insertBefore(tag, control);
+
+var player;
+function onYouTubePlayerAPIReady() {
+player = new YT.player('video'), {
+height: '360px',
+width: '640px',
+videoId: 'g3-TbsMEVPw'
